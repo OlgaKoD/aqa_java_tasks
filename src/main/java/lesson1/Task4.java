@@ -4,14 +4,23 @@ package lesson1;
 System.out.println, System.out.print можно использовать только по одному разу
 для этого нужно воспользоваться циклом do () while
 */
+
 public class Task4 {
-public static void main(String[] args) { 
-String s = "Olga"; 
-int i = 0; 
-do {
-System.out.println( s + " " + s + " " + s + " " + s + " " + s + " " + s + " " + s + " " + s + " " + s + " " + s); 
-i++;
-}
-while(i<5);
-}
+    
+    public static void main(String[] args) { 
+    
+        String s = "Olga"; 
+        int i = 0; 
+        do {
+        int j = 0; 
+        do {
+        System.out.print( s + " ");
+        j++;
+        }
+        while(j<10);
+        System.out.println();
+        i++;
+        }
+        while(i<5);
+    }
 }
