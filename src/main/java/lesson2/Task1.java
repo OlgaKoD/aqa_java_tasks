@@ -20,7 +20,7 @@ package lesson2;
  */
 
 public class Task1 {
-
+    //Testing
     public static void main(String[] args) {
         Task1 tsk1 = new Task1();
         tsk1.setAge(101);
