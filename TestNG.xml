@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <parameter name="v1"  value="1"/>
+    <parameter name="v2"  value="2"/>
+    <parameter name="v3"  value="3"/>
+    <parameter name="expected"  value="1"/>
+    <test name="task1" >
+        <classes>
+            <class name="TestTask11" />
+        </classes>
+    </test>
+    <parameter name="name" value="Olha" />
+    <parameter name="expected2" value="Olha Olha Olha Olha Olha Olha Olha Olha Olha Olha&#xD;&#xA;Olha Olha Olha Olha Olha Olha Olha Olha Olha Olha&#xD;&#xA;Olha Olha Olha Olha Olha Olha Olha Olha Olha Olha&#xD;&#xA;Olha Olha Olha Olha Olha Olha Olha Olha Olha Olha&#xD;&#xA;Olha Olha Olha Olha Olha Olha Olha Olha Olha Olha&#xD;&#xA;" />
+    <test name="task2" >
+        <classes>
+            <class name="TestTask12" />
+        </classes>
+    </test>
+    <parameter name="greeting" value="#@)$?$0" />
+    <parameter name="expected3" value="0$?$)@#" />
+    <test name="task5" >
+        <classes>
+            <class name="TestTask15" />
+        </classes>
+    </test>
+</suite>
