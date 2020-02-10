@@ -1,6 +1,7 @@
 import org.testng.annotations.*;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class TestTask12 {
 
@@ -23,6 +24,20 @@ public class TestTask12 {
 
         }
 
+        @Parameters({"name"})
+        @Test
+        public void checkPrintName3(String n) {
+            String actual = task.printName(n);
+            int linesActual;
+            int columnsActual;
+
+            String[] splittedLines = actual.split(System.lineSeparator());
+            linesActual = splittedLines.length;
+
+            String[] splittedColumns = splittedLines[0].split(" ");
+            columnsActual = splittedColumns.length;
+            assertTrue((linesActual == 5 && columnsActual == 10), String.format("Expected 5 lines and 10 columns, but received %d lines and %d columns", linesActual, columnsActual));
+        }
 
         @DataProvider(name = "names")
         public Object[][] provider() {
